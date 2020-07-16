@@ -1,0 +1,27 @@
+header {
+	background-color: cornflowerblue;
+}
+
+.card-list {
+	margin-top: 50px;
+}
+
+.rows {
+	margin-top: 50px;
+}
+
+.sidebar {
+	position: absolute;
+
+}
+
+.sidebar2 {
+	position: absolute;
+	left: 70px;
+}
+
+.footbar {
+	margin-top: 10px;
+	padding-left: 50%;
+	transform: translateX(-50%);
+}
