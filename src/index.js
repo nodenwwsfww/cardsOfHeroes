@@ -1,5 +1,5 @@
 "use strict";
-const maxCardsCountOnPage = 8; // Максимальное количество карточек на одной странице (поменять если нужно)
+const maxCardsOnPage = 8; // Максимальное количество карточек на одной странице (поменять если нужно)
 const maxDigitButtons = 7; // Максимальное количество кнопок-цифр для переключения на другую страницу
 
 const filterBlock = document.querySelector(".dropdown-menu"),
@@ -63,7 +63,7 @@ const updateCardsList = filter => {
 	];
 
 	const addHero = hero => {
-		if (heroesDataPages[heroesDataPages.length - 1].length < maxCardsCountOnPage) {
+		if (heroesDataPages[heroesDataPages.length - 1].length < maxCardsOnPage) {
 			heroesDataPages[heroesDataPages.length - 1].push(hero);
 		} else {
 			heroesDataPages.push([]);
