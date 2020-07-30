@@ -193,6 +193,7 @@ const handlers = () => {
 const loadHeroes = async () => {
     try {
         const response = await fetch("./dbHeroes.json");
+        if (response.status !== 200) throw new Error(response.status);
         const data = await response.json();
         heroesData = data;
         updateCardsList();
