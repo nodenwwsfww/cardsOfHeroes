@@ -190,20 +190,17 @@ const handlers = () => {
     heroFilterHandler();
     changePageHandler();
 };
-const loadHeroes = () => {
-    fetch("./dbHeroes.json")
-        .then(response => {
-            if (response.status !== 200) {
-                throw new Error("invalid server response status");
-            }
-            return response.json();
-        })
-        .then(data => {
-            heroesData = data;
-            updateCardsList();
-            handlers();
-        })
-        .catch(error => console.error(error));
+const loadHeroes = async () => {
+    try {
+        const response = await fetch("./dbHeroes.json");
+        const data = await response.json();
+        heroesData = data;
+        updateCardsList();
+        handlers();
+    } catch(err) {
+        console.error(err);
+    }
+
 };
 
 loadHeroes();
