@@ -190,6 +190,7 @@ const handlers = () => {
     heroFilterHandler();
     changePageHandler();
 };
+
 const loadHeroes = async () => {
     try {
         const response = await fetch("./dbHeroes.json");
@@ -198,7 +199,7 @@ const loadHeroes = async () => {
         heroesData = data;
         updateCardsList();
         handlers();
-    } catch(err) {
+    } catch (err) {
         console.error(err);
     }
 
